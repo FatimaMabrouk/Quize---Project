@@ -1,0 +1,14 @@
+.continer-1 {
+	margin: auto;
+	text-align: center;
+	border-radius: 5px;
+    background-color: grey;
+    padding: 20px;
+}
+label {
+	padding: 10px;
+	margin: 5px;
+}
+.input {
+	margin: 10px;
+}
