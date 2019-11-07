@@ -8,10 +8,19 @@
 $(document).ready(function(){
 
 var $body = $('body');
-$('form').submit(function(){
- $('body').hide();
- $('.form2').appendTo('body');	
+$('#go').on('click', function(){
+var $first  =  $('#firstName').val();
+var $second =  $('#firstName').val();
+$first.append();
+$second.append();
+alert();
 })
+$('#lastName').on('click',function(){
+
+})
+
+})
+
 
 
 
