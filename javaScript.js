@@ -1,12 +1,26 @@
-document.getElementById('next').onclick = function quizPage(){
-   document.getElementById('next') = '<a herf='quize.html'> </a>'
-} 
+// array of objects for qustion and the right answers;
+var qustions = [{
+  "qustion":"According to your text, one study found that 90 percent of firings result from ?",
+  "Choice1": "interpersonal relationship problems.",
+  "Choice2": "substandard interpersonal skills.",
+  "Choice3": "inappropriate behavior.",
+  "Choice4": "Choices 1 and 3 but not 2",
+  "answer": " "
+ }, {
+  "qustion":"According to your text, one study found that 90 percent of firings result from ?",
+  "Choice1": "interpersonal relationship problems.",
+  "Choice2": "substandard interpersonal skills.",
+  "Choice3": "inappropriate behavior.",
+  "Choice4": "Choices 1 and 3 but not 2",
+  "answer": " "
 
-// quize 
-// store qustion on array // 
-var qustion   = ['q1','q2','q3','q4','q5','q6','q7','q8','q9','q1'];
-var answer = ['a1','a2','a3','a4','a5','a6','a7','a8','a9','a10'];
-
-$(document).ready(function(){
- var $qustion1 = qustion[0];	
-})
+  },
+  {
+  "qustion":"According to your text, one study found that 90 percent of firings result from ?",
+  "Choice1": "interpersonal relationship problems.",
+  "Choice2": "substandard interpersonal skills.",
+  "Choice3": "inappropriate behavior.",
+  "Choice4": "Choices 1 and 3 but not 2",
+  "answer": " "
+  },
+]
