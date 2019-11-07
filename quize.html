@@ -2,23 +2,23 @@
 <html>
 <head>
 	<title>Start Quize </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <h1>Start Quize</h1>
 <div class='continer-quize'>
     
   	<div id='qustion'></div>
-    <input type="radio" name="" value="c1">  
-    <input type="radio" name="" value="c2">  
-    <input type="radio" name="" value="c3">   
-    <input type="radio" name="" value="c4">  
-    
-   
-    <a id='go' href="index.html">back</a>
-</div>
+	<p class ="choic"><input type="radio" name="" value="c1"><span id="answer1">
+	</span></p>  
+	<p class ="choic"><input type="radio" name="" value="c2"><span id="answer2"> </span></p>  
+    <p class ="choic"><input type="radio" name="" value="c3"><span id="answer3"> </span></p>   
+    <p class ="choic"><input type="radio" name="" value="c4"><span id="answer4"> </span></p>  
+    </div>   
+<!-- get result shown in this div (your right answer) -->
  <div id='score' class="continer-quize"></div>
 
-
+<!-- jquery library -->
  <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
