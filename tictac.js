@@ -18,12 +18,22 @@ var win = [[0,1,2],[3,4,5],[6,7,5],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 //  checkPlayer();
 // });
 // choos you 
- $('#turn-x').on('click',function(){
-   computerTurn = 'o';
-    $('.tic').on('click', function (){
-    var $toc = $(this).text('x');
-    $toc.append();
+$('#player1').on('click', function(){
+   $('#turn-x').on('click', function(){
+    player1 = 'x';
+    $('.tic').on('click', function(){
+      $(this).append(player1);
     })
+   })
+
+});
+
+ // $('#turn-x').on('click',function(){
+ //   computerTurn = 'o';
+ //    $('.tic').on('click', function (){
+ //    var $toc = $(this).text('x');
+ //    $toc.append();
+ //    })
   // alert('checked');
  // $('#turn-o').removeClass('player');
  // $('#turn-x').addClass('player'); 
