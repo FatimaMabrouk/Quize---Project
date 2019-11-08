@@ -2,7 +2,7 @@
 // alert('checked');
 $(document).ready(function (){ 
 
-var turn='X'
+var turn='X';
 
 // array to stores values that will check
 var turns = ['#','#','#','#','#','#','#','#','#'];
@@ -12,6 +12,8 @@ var computersTurn = 'O';
 
 // keep trakes if its computers turn
 var gameCon = false;
+// keep track computers game
+var count= 0;
 
 // change player's turn to x and computers to O
 $('#turnX').on('click', function(){
@@ -19,26 +21,95 @@ $('#turnX').on('click', function(){
   computersTurn = 'X';
   $('#turnX').removeClass("player");
   $('#turnO').addClass("player");
-
+  reset();
 });
 
 
 $('#turnO').on('click', function(){
   turn = 'X';
   computersTurn = 'O';
-  $('#turnO').removeClass("player");
-  $('#turnX').addClass("player");
+  $('#turnO').removeClass("player first");
+  $('#turnX').addClass("player seconde");
+   reset();
 
 });
+ 
+
+function computersTurn(){
+
+  var  taken= false;
+    while(taken===false && count !==5){
+    var computerMove = (Math.random()*10).toFixed();
+    var  move = $('#'+computerMove).text();
+   if(move ==="#") {
+      $("#"+computersTurn).text(computersTurn);
+       taken = true;
+       turns[computersMove] = computersTurn;
+   }
+
+  }
+
+  }
+
+
+
 
 function playerTurn(turn, id) {
   var spotTaken = $('#'+id).text();
   if(spotTaken === "#"){
+    count++;
     turns[id] = turn;
     $('#'+id).text(turn);
-
-  }
+      
+     winCondition(turns, turn); 
+   }
+     if(gameCon===false){
+      computersTurn();
+      winCondition(turns, computersTurn)
+     }
 }
+
+// ///
+function winCondition(turnArray, currentTurn) {
+  if(turnArray[0] === currentTurn && turnArray[1] === currentTurn && turnArray[2] === currentTurn){
+   gameCon = true;
+     reset();
+  alert('playerTurn for today '+ currentTurn + ' ');
+}
+  else if(turnArray[2]=== currentTurn && turnArray[4] === currentTurn && turnArray[6]=== currentTurn ){
+      gameCon = true;
+      reset();
+      alert("Player " + currentTurn " 2,4" );
+  }
+  else if(turnArray[0] === currentTurn && turnArray[3] === currentTurn && turnArray[6] === currentTurn) {
+      gameCon = true;
+      reset();
+      alert("Player " + currentTurn " 2,4" );
+  }
+   else if(turnArray[0] === currentTurn && turnArray[4] === currentTurn && turnArray[8] === currentTurn) {
+      gameCon = true;
+      reset();
+      alert("Player " + currentTurn " 2,4" );
+  }
+    else if(turnArray[1] === currentTurn && turnArray[4] === currentTurn && turnArray[7] === currentTurn) {
+          gameCon = true;
+          reset();
+          alert("Player " + currentTurn " 2,4" );
+  }
+    else if(turnArray[6] === currentTurn && turnArray[7] === currentTurn && turnArray[8] === currentTurn) {
+      gameCon = true;
+      reset();
+      alert("Player " + currentTurn " 2,4" );
+    }
+    else if(turnArray[3] === currentTurn && turnArray[4] === currentTurn && turnArray[5] === currentTurn) {
+      gameCon = true;
+      reset();
+      alert("Player " + currentTurn " 2,4" );
+  } else {
+  gameCon = false;
+} 
+}
+
 
 $(".tic").on('click',function(){
   var slot = $(this).attr('id');
@@ -46,14 +117,12 @@ $(".tic").on('click',function(){
 });
 
 function reset(){
-  turns = turns = ['#','#','#','#','#','#','#','#','#'];
-  
+  turns =  ['#','#','#','#','#','#','#','#','#'];
   count = 0;
+   // 
   $(".tic").text("#");
-  gameCon = true; 
-
+   gameCon = true; 
 }
-
 
 });
 
