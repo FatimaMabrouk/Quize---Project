@@ -1,12 +1,14 @@
 
 .continer {
-	margin : auto;
+	display: flex;
+	flex-direction: column;
+    width: 38%;
+    align-items: center;
+    margin: auto;
 	box-sizing: border-box;
-	width: 400px;
 }
 
 .tic  {
-	padding: 0px;
     width: 130px;
     height: 123px;
 	background-color: lightblue;
@@ -28,6 +30,7 @@
 .player-button {
 	text-align: center;
 	border: 1px solid lightblue;
+	width: 500px;
 }
 
 #two , #five , #eight {
@@ -39,5 +42,10 @@
 	padding: 10px;
 	width:100px;
 }
+.tic {
+	font-size: 60px;
+	color: white;
+	text-align: center;
+ }
 
 

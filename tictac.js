@@ -3,9 +3,11 @@
 $(document).ready(function (){ 
 
 // 
+var player1;
+var player2;
 var turn = 'x';
-var computerTurn = 'o';
 var checked = false;
+var win = [[0,1,2],[3,4,5],[6,7,5],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 
 // $('#turn-x').on('click',function(){
 //   turn1 = 'o';
@@ -29,7 +31,7 @@ var checked = false;
 });
  $('#turn-o').on('click', function(){
   computerTurn = 'x';
-  formData.append($('#one'), computerTurn);
+  
   $('.tic').on('click', function (){
     var $toc = $(this).text('o');
     $toc.append();
