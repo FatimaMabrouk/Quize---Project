@@ -1,5 +1,11 @@
-.tic , .player {
+.tic  {
 	padding: 10px;
 	width: 40px;
 	background-color: lightblue;
 }
+.player {
+	padding: 10px;
+	width: 40px;
+	background-color: lightblue;
+}
+
