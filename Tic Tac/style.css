@@ -1,11 +1,38 @@
+
+.continer {
+	margin : auto;
+	box-sizing: border-box;
+	width: 400px;
+}
+
 .tic  {
-	padding: 10px;
-	width: 40px;
+	padding: 0px;
+    width: 130px;
+    height: 123px;
 	background-color: lightblue;
 }
+.row-1 {
+	border-bottom: 1px solid black;
+}
+.row-2 {
+	border-bottom: 1px solid black;
+}
+/*.row-3 {
+	border-bottom: 1px solid black;
+}*/
 .player {
 	padding: 10px;
 	width: 40px;
 	background-color: lightblue;
 }
+.player-button {
+	border: 1px solid lightblue;
+}
+
+#two , #five , #eight {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
 

@@ -21,3 +21,15 @@ $('#turn-o').on('click',function(){
  $('#turn-x').addClass('player'); 
 
 });
+
+function checkPlayer(){
+  if(turn1 === 'o') {
+  	$('.tic').on('click', function (){
+  		$(this).val('o').append();
+  	})
+  	else if(turn1 === 'x') {
+  		$('.tic').on('click', function (){
+  			$(this).text('x');
+  		})
+  	}
+  }
