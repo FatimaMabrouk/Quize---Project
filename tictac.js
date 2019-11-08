@@ -18,38 +18,45 @@ var win = [[0,1,2],[3,4,5],[6,7,5],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 //  checkPlayer();
 // });
 // choos you 
-$('#player1').on('click', function(){
-   $('#turn-x').on('click', function(){
+$('#player1').one('click', function(e){
+  // for x is if its player one
+   $('#turn-x').one('click', function(){
     player1 = 'x';
-    $('.tic').one('click', function(){
+    $('.tic').one('click', function(e){
       $(this).append(player1);
+      $(this).off(e);
     })
    })
-   $('#turn-o').on('click', function(){
+   // for x is if its player one
+  $('#turn-o').one('click', function(){
     player1 = 'o';
-    $('.tic').one('click', function (){
-      $(this).append(player1);
+    $('.tic').one('click', function(e){
+      $(this).append(player2);
+      $(this).off(e);
     })
    })
+
 
 });
 
-$('#player2').on('click', function(){
-   $('#turn-x').on('click', function(){
-    player2 = 'x';
-    $('.tic').one('click', function(){
-      $(this).append(player2);
-    })
-   })
-   $('#turn-o').on('click', function(){
-    player2 = 'o';
-    $('.tic').one('click', function (){
-      $(this).append(player2);
+// $('#player2').one('click', function(event){
+//    $('#turn-x').one('click', function(){
+//     player2 = 'x';
+//     $('.tic').one('click', function(e){
+//       $(this).append(player2);
+//       $(this).off(e);
+//     })
+//    })
+//    $('#turn-o').one('click', function(){
+//     player2 = 'o';
+//     $('.tic').one('click', function (){
+//       $(this).append(player2);
+//       $('#player2').off(event);
 
-    })
-   })
+//     })
+//    })
 
-});
+// });
 
  // $('#turn-x').on('click',function(){
  //   computerTurn = 'o';
