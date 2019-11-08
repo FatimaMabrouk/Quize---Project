@@ -1,3 +1,11 @@
+body {
+	 background-image: url(images-5.jpeg);
+	 background-repeat: no-repeat;
+     background-size: cover;
+     position: relative;
+}
+
+
 
 .continer {
 	display: flex;
@@ -5,9 +13,10 @@
     width: 38%;
     align-items: center;
     margin: auto;
+    margin-top: 20px;
 	box-sizing: border-box;
-}
-
+	margin-top: 50px;
+  }
 .tic  {
     width: 130px;
     height: 123px;
@@ -25,13 +34,14 @@
 .player {
 	padding: 10px;
 	width: 40px;
-	background-color: lightblue;
+	background-color: red;
 }
 .player-button {
 	text-align: center;
-	border: 1px solid lightblue;
 	width: 500px;
-}
+	height: 180px;
+    margin: auto;
+  }
 
 #two , #five , #eight {
     border-left: 1px solid black;
@@ -39,13 +49,32 @@
 
 }
 #reset {
+    margin-top: 10px;
 	padding: 10px;
-	width:100px;
+	width: 120px;
+	background-color: #E54B4B;
 }
 .tic {
 	font-size: 60px;
 	color: white;
 	text-align: center;
  }
+ #player1,#player2 {
+    margin-top: 10px;
+    width: 120px;
+    padding: 10px;
+    margin-right: 50px;
+    background-color: #E54B4B;
+    font-size: 25px;
+ }
+
+
+
+
+
+
+
+
+
 
 
