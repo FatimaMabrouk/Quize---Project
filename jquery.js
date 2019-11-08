@@ -1,30 +1,17 @@
-// // check jquery is linked or not
-//  $('body').css('background-color','blue');
-//  // $(document).ready(function(){
-//  // 	$('#next').on('click', function(){
+// check 
+function valition(){
 
-//  // 	})
-//  // })
-$(document).ready(function(){
+var userName = $('#name').val();
+var passWord = $('#pass').val();
 
-var $body = $('body');
-$('#go').on('click', function(){
-var $first  =  $('#firstName').val();
-var $second =  $('#firstName').val();
-$first.append();
-$second.append();
-alert();
-})
-$('#lastName').on('click',function(){
+if(typeof userName === 'number'){
+   $('#nameError').html('Name must be string');
+}
+if(userName === ''){
+	$('#nameError').html('Please inter your email');
+}
+if( passWord < 8 && !passWord.includes('')){
+  $('#passError').html('Your passWord should be more than 8');	
+}
 
-})
-
-})
-
-
-
-
-
-
-
-})
+}

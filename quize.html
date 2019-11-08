@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Start Quize </title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title> Validation </title>
 </head>
 <body>
-<h1>Start Quize</h1>
-<div class='continer-quize'>
-    
-  	<div id='qustion'></div>
-	<p class ="choic"><input type="radio" name="" value="c1"><span id="answer1">
-	</span></p>  
-	<p class ="choic"><input type="radio" name="" value="c2"><span id="answer2"> </span></p>  
-    <p class ="choic"><input type="radio" name="" value="c3"><span id="answer3"> </span></p>   
-    <p class ="choic"><input type="radio" name="" value="c4"><span id="answer4"> </span></p>  
-    </div>   
-<!-- get result shown in this div (your right answer) -->
- <div id='score' class="continer-quize"></div>
+ <div class='continer'>
+ 	<form name="form" action="" onsubmit="valitation()">
+      <div class= 'coll-1'>
+	      	<label>Name </label>
+	      	<input type="text" name="" required="">
+	      	<p id='nameError'></p>
+        </div>
 
-<!-- jquery library -->
- <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="javaScript.js"></script>
+       <div class= 'coll-2'>
+	      	<label>Email </label>
+	      	<input type="email" name="" required="">
+	      	<p id='emailError'></p>
+       </div>
+
+        <div class= 'coll-3'>
+	      	<label> Password</label>
+	      	<input type="password" name="" required="">
+	      	<p id='passError'></p>
+	      </div>
+
+	      <input type="submit">
+	  </form>
+      </div>
+ </div>	
+ <script type="text/javascript" src="jquery.js"></script>
 </body>
 </html>
