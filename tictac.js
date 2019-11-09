@@ -45,7 +45,7 @@ $('#turnO').on('click', function(){
 function computerTurn(){
 
   var  taken= false;
- while(taken===false && count !== 5){
+  while(taken===false && count !== 5){
   // genarate random
     var computersMove = (Math.random()*10).toFixed();
     var  move = $('#'+computersMove).text();
@@ -54,13 +54,11 @@ function computerTurn(){
         taken = true;
         turns[computersMove] = computersTurn;
          }
-
-      }
-
+      }   
   }
 
 
-/////////// turn ////////////
+/////////// Turn  //////////////
 
 function playerTurn(turn, id) {
   var spotTaken = $('#'+id).text();
@@ -73,8 +71,9 @@ function playerTurn(turn, id) {
    
      if(gameCon === false){
       computerTurn();
+      /// win current == 
       winCondition(turns, computersMove);
-     }
+      }
      }
 }
 
@@ -138,7 +137,7 @@ function winCondition(turnArray, currentTurn) {
   } 
 }
 
-
+//// class tic for button to take #
 $(".tic").on('click',function(){
   var slot = $(this).attr('id');
   playerTurn(turn, slot);

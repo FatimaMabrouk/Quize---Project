@@ -6,9 +6,6 @@ body {
      font-family: 'Supermercado One', cursive;
      font-family: 'Sunshiney', cursive;
 }
-
-
-
 .continer {
 	display: flex;
 	flex-direction: column;
