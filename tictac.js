@@ -35,21 +35,22 @@ $('#turnO').on('click', function(){
 });
  
 
-function computersTurn(){
+function computerTurn(){
 
   var  taken= false;
-    while(taken===false && count !==5){
-    var computerMove = (Math.random()*10).toFixed();
-    var  move = $('#'+computerMove).text();
+ while(taken===false && count !== 5){
+  // genarate random
+    var computersMove = (Math.random()*10).toFixed();
+    var  move = $('#'+computersMove).text();
    if(move ==="#") {
-      $("#"+computersTurn).text(computersTurn);
+      $("#"+computersMove).text(computersTurn);
        taken = true;
        turns[computersMove] = computersTurn;
-   }
+        }
 
-  }
+      }
 
-  }
+    }
 
 
 /////////// turn ////////////
@@ -62,10 +63,11 @@ function playerTurn(turn, id) {
     $('#'+id).text(turn);
       
      winCondition(turns, turn); 
-   }
+   
      if(gameCon === false){
-      computersTurn();
-      winCondition(turns, computersTurn);
+      computerTurn();
+      winCondition(turns, computersMove);
+     }
      }
 }
 
@@ -95,32 +97,36 @@ function winCondition(turnArray, currentTurn) {
       reset();
       alert("player" + currentTurn + " wins! (Top row across 0,4, and 8 spots)" );
   }
-
+     // 5
     else if(turnArray[1] === currentTurn && turnArray[4] === currentTurn && turnArray[7] === currentTurn) {
           gameCon = true;
           reset();
           alert("player" + currentTurn + " wins! (Top row across 1,4 and 7 spots)");
   }
-
+    // 6
     else if(turnArray[6] === currentTurn && turnArray[7] === currentTurn && turnArray[8] === currentTurn) {
       gameCon = true;
       reset();
       alert("player" + currentTurn + " wins! (Top row across 6,7, and 8 spots)");
     }
+
+    // 7
     else if(turnArray[3] === currentTurn && turnArray[4] === currentTurn && turnArray[5] === currentTurn) {
       gameCon = true;
       reset();
       alert("player" + currentTurn + " wins! (Top row across 3,4, and 5 spots)" );
-  }  else if(turnArray[4] === currentTurn && turnArray[5] === currentTurn && turnArray[8] === currentTurn) {
+  }
+  // 8 
+   else if(turnArray[4] === currentTurn && turnArray[5] === currentTurn && turnArray[8] === currentTurn) {
       gameCon = true;
       reset();
       alert("player" + currentTurn + " wins! (Top row across 4,3, and 8 spots)" );
   }
-
+  // 9
 
   else {
   gameCon = false;
-} 
+  } 
 }
 
 
