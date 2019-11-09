@@ -3,6 +3,8 @@ body {
 	 background-repeat: no-repeat;
      background-size: cover;
      position: relative;
+     font-family: 'Supermercado One', cursive;
+     font-family: 'Sunshiney', cursive;
 }
 
 
@@ -17,17 +19,17 @@ body {
 	box-sizing: border-box;
 	margin-top: 50px;
   }
-.tic  {
-    width: 130px;
-    height: 123px;
-	background-color: lightblue;
-}
-.row-1 {
-	border-bottom: 1px solid black;
+ h1 {
+   text-align:center;
+   font-size: 56px;
+  }
+
+/*.row-1 {
+	    border-bottom: 5px solid black;
 }
 .row-2 {
-	border-bottom: 1px solid black;
-}
+	    border-bottom: 5px solid black;
+}*/
 /*.row-3 {
 	border-bottom: 1px solid black;
 }*/
@@ -41,13 +43,15 @@ body {
 	width: 500px;
 	height: 180px;
     margin: auto;
+    margin-top: -39px;
   }
 
 #two , #five , #eight {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
 
 }
+
 #reset {
     margin-top: 10px;
 	padding: 10px;
@@ -58,14 +62,20 @@ body {
 	font-size: 60px;
 	color: white;
 	text-align: center;
+    background-color: oldlace;
+    width: 130px;
+    height: 123px;
+	color: black;
  }
- #player1,#player2 {
+ #turnX , #turnO {
     margin-top: 10px;
     width: 120px;
     padding: 10px;
     margin-right: 50px;
     background-color: #E54B4B;
     font-size: 25px;
+    margin-left: 45px;
+
  }
 
 
