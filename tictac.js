@@ -52,7 +52,7 @@ function computersTurn(){
   }
 
 
-
+/////////// turn ////////////
 
 function playerTurn(turn, id) {
   var spotTaken = $('#'+id).text();
@@ -63,49 +63,62 @@ function playerTurn(turn, id) {
       
      winCondition(turns, turn); 
    }
-     if(gameCon===false){
+     if(gameCon === false){
       computersTurn();
-      winCondition(turns, computersTurn)
+      winCondition(turns, computersTurn);
      }
 }
 
 // ///
 function winCondition(turnArray, currentTurn) {
+  // 1
   if(turnArray[0] === currentTurn && turnArray[1] === currentTurn && turnArray[2] === currentTurn){
-   gameCon = true;
+     gameCon = true;
      reset();
-  alert('playerTurn for today '+ currentTurn + ' ');
-}
+     alert("player" + currentTurn + " wins! (Top row across 0,1, and 2 spots)");
+    }
+  // 2
   else if(turnArray[2]=== currentTurn && turnArray[4] === currentTurn && turnArray[6]=== currentTurn ){
       gameCon = true;
       reset();
-      alert("Player " + currentTurn " 2,4" );
+      alert("player" + currentTurn + " wins! (Top row across 2,4, and 6 spots)" );
   }
+  // 3 
   else if(turnArray[0] === currentTurn && turnArray[3] === currentTurn && turnArray[6] === currentTurn) {
       gameCon = true;
       reset();
-      alert("Player " + currentTurn " 2,4" );
+      alert("player" + currentTurn + " wins! (Top row across 0,3, and 6 spots)" );
   }
+   // 4
    else if(turnArray[0] === currentTurn && turnArray[4] === currentTurn && turnArray[8] === currentTurn) {
       gameCon = true;
       reset();
-      alert("Player " + currentTurn " 2,4" );
+      alert("player" + currentTurn + " wins! (Top row across 0,4, and 8 spots)" );
   }
+
     else if(turnArray[1] === currentTurn && turnArray[4] === currentTurn && turnArray[7] === currentTurn) {
           gameCon = true;
           reset();
-          alert("Player " + currentTurn " 2,4" );
+          alert("player" + currentTurn + " wins! (Top row across 1,4 and 7 spots)");
   }
+
     else if(turnArray[6] === currentTurn && turnArray[7] === currentTurn && turnArray[8] === currentTurn) {
       gameCon = true;
       reset();
-      alert("Player " + currentTurn " 2,4" );
+      alert("player" + currentTurn + " wins! (Top row across 6,7, and 8 spots)");
     }
     else if(turnArray[3] === currentTurn && turnArray[4] === currentTurn && turnArray[5] === currentTurn) {
       gameCon = true;
       reset();
-      alert("Player " + currentTurn " 2,4" );
-  } else {
+      alert("player" + currentTurn + " wins! (Top row across 3,4, and 5 spots)" );
+  }  else if(turnArray[4] === currentTurn && turnArray[5] === currentTurn && turnArray[8] === currentTurn) {
+      gameCon = true;
+      reset();
+      alert("player" + currentTurn + " wins! (Top row across 4,3, and 8 spots)" );
+  }
+
+
+  else {
   gameCon = false;
 } 
 }
@@ -116,6 +129,8 @@ $(".tic").on('click',function(){
   playerTurn(turn, slot);
 });
 
+
+/////////. Reset Function //// 
 function reset(){
   turns =  ['#','#','#','#','#','#','#','#','#'];
   count = 0;
